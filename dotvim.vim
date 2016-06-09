@@ -98,12 +98,12 @@ endif
 if has("user_commands")
   " Setting up Vundle - the vim plugin bundler
   let VundleInstalled=0
-  let vundle_readme=expand('~/.vim/bundle/Vundle/README.md')
+  let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
   if !filereadable(vundle_readme)
     echo "Installing Vundle.."
     echo ""
     silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/VundleVim/Vundle.git ~/.vim/bundle/Vundle
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     let VundleInstalled=1
   endif
 endif
