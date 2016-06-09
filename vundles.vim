@@ -7,80 +7,86 @@
 "   Ben O'Hara <bohara@gmail.com>
 "
 
+call vundle#begin()
+
 " Vundle itself
-Bundle 'gmarik/vundle'
-" Required for settings
-Bundle 'chriskempson/base16-vim'
+Plugin 'VundleVim/Vundle'
 
 " General
 if count(g:vundles, 'general')
-  Bundle 'scrooloose/nerdtree'
-  Bundle 'YankRing.vim'
+  Plugin 'scrooloose/nerdtree'
+  " Plugin 'chriskempson/base16-vim'
+  Plugin 'YankRing.vim'
   let g:yankring_history_dir = $HOME.'/.vim/'
   let g:yankring_history_file = '.yankring_history'
-  ""Bundle 'tpope/vim-repeat'
-  ""Bundle 'AutoClose'
-  Bundle 'kien/ctrlp.vim'
-  Bundle 'jistr/vim-nerdtree-tabs'
-  Bundle 'sudo.vim'
-  Bundle 'bronson/vim-trailing-whitespace'
-  Bundle 'mbbill/undotree'
-  Bundle 'mhinz/vim-signify'
-  Bundle 'Raimondi/delimitMate'
-  Bundle 'bling/vim-airline'
-  Bundle 'rodjek/vim-puppet'
+  ""Plugin 'tpope/vim-repeat'
+  ""Plugin 'AutoClose'
+  Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'FelikZ/ctrlp-py-matcher'
+  Plugin 'jistr/vim-nerdtree-tabs'
+  " Plugin 'sudo.vim'
+  Plugin 'bronson/vim-trailing-whitespace'
+  " Plugin 'mbbill/undotree'
+  Plugin 'mhinz/vim-signify'
+  " Plugin 'Raimondi/delimitMate'
+  Plugin 'vim-airline/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
+  " Plugin 'rodjek/vim-puppet'
+  Plugin 'minibufexpl.vim'
 endif
 
 if count(g:vundles, 'git')
   if executable('git')
-    Bundle 'tpope/vim-fugitive'
+    Plugin 'tpope/vim-fugitive'
   endif
 endif
 
 if count(g:vundles, 'hg')
  if executable('hg')
-    Bundle 'k-takata/hg-vim'
+    Plugin 'k-takata/hg-vim'
   endif
 endif
+
 " General Programming
 if count(g:vundles, 'programming')
-  Bundle 'godlygeek/tabular'
+  Plugin 'godlygeek/tabular'
   if executable('ack')
-    Bundle 'mileszs/ack.vim'
+    Plugin 'mileszs/ack.vim'
   endif
   if v:version > 700
-    Bundle 'scrooloose/syntastic'
+    " Plugin 'scrooloose/syntastic'
     if executable('ctags')
-      Bundle 'majutsushi/tagbar'
+      " Plugin 'majutsushi/tagbar'
     endif
-endif
+  endif
 endif
 
 if count(g:vundles, 'completion')
-    Bundle 'Shougo/neocomplcache'
-    Bundle 'Shougo/neosnippet'
-    Bundle 'Shougo/neosnippet-snippets'
-    Bundle 'scrooloose/snipmate-snippets'
-    Bundle 'honza/vim-snippets'
-    Bundle 'Indent-Guides'
+  " Plugin 'Shougo/neocomplcache'
+  " Plugin 'Shougo/neosnippet'
+  " Plugin 'Shougo/neosnippet-snippets'
+  " Plugin 'scrooloose/snipmate-snippets'
+  " Plugin 'honza/vim-snippets'
+  " Plugin 'Indent-Guides'
+  Plugin 'Valloric/YouCompleteMe'
 endif
 
 " PHP
 if count(g:vundles, 'php')
-  Bundle 'spf13/PIV'
+  Plugin 'spf13/PIV'
 endif
 
 " Python
 if count(g:vundles, 'python')
-  Bundle 'hynek/vim-python-pep8-indent'
+  Plugin 'hynek/vim-python-pep8-indent'
   let g:syntastic_python_flake8_args='--ignore=E501'
 endif
 
 " Javascript
 if count(g:vundles, 'javascript')
-  Bundle 'leshill/vim-json'
-  Bundle 'groenewege/vim-less'
-  Bundle 'taxilian/vim-web-indent'
+  Plugin 'leshill/vim-json'
+  Plugin 'groenewege/vim-less'
+  Plugin 'taxilian/vim-web-indent'
 endif
 
 " HTML
@@ -92,19 +98,22 @@ endif
 
 " Ruby
 if count(g:vundles, 'ruby')
-  Bundle 'tpope/vim-rails'
+  Plugin 'tpope/vim-rails'
 endif
 
 " Misc
 if count(g:vundles, 'misc')
-  Bundle 'tpope/vim-markdown'
-  Bundle 'spf13/vim-preview'
-  Bundle 'tpope/vim-cucumber'
-  Bundle 'markcornick/vim-vagrant'
-  Bundle 'Puppet-Syntax-Highlighting'
-  Bundle 'ekalinin/Dockerfile.vim'
+  " Plugin 'tpope/vim-markdown'
+  Plugin 'iamcco/markdown-preview.vim'
+  " Plugin 'spf13/vim-preview'
+  " Plugin 'tpope/vim-cucumber'
+  " Plugin 'markcornick/vim-vagrant'
+  " Plugin 'Puppet-Syntax-Highlighting'
+  " Plugin 'ekalinin/Dockerfile.vim'
   if v:version > 701
-    Bundle 'zhaocai/GoldenView.Vim'
+    " Plugin 'zhaocai/GoldenView.Vim'
   endif
   let g:goldenview__enable_default_mapping=0
 endif
+
+call vundle#end()
