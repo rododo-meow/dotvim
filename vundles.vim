@@ -14,7 +14,8 @@ Plugin 'VundleVim/Vundle'
 
 " General
 if count(g:vundles, 'general')
-  Plugin 'scrooloose/nerdtree'
+  Plugin 'upsuper/vim-colorschemes'
+  " Plugin 'scrooloose/nerdtree'
   " Plugin 'chriskempson/base16-vim'
   Plugin 'YankRing.vim'
   let g:yankring_history_dir = $HOME.'/.vim/'
