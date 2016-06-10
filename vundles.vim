@@ -10,7 +10,7 @@
 call vundle#begin()
 
 " Vundle itself
-Plugin 'VundleVim/Vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " General
 if count(g:vundles, 'general')
