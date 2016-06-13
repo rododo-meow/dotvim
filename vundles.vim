@@ -33,6 +33,7 @@ if count(g:vundles, 'general')
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   " Plugin 'rodjek/vim-puppet'
+  Plugin 'minibufexpl.vim'
 endif
 
 if count(g:vundles, 'git')

@@ -16,15 +16,15 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ 'AcceptSelection("t")': ['<c-t>'],
+    \ 'AcceptSelection("e")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:25'
 
 " Directories to ignore
 set wildignore+=*/smarty_c/**
-set wildignore+=*/vendor/**
+" set wildignore+=*/vendor/**
 set wildignore+=*/bower_components/**
 
 let g:ctrlp_clear_cache_on_exit = 0
