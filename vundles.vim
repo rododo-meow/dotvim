@@ -117,4 +117,6 @@ if count(g:vundles, 'misc')
   let g:goldenview__enable_default_mapping=0
 endif
 
+Plugin 'embear/vim-localvimrc'
+
 call vundle#end()

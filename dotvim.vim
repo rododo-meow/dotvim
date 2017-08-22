@@ -48,7 +48,7 @@ set autoindent          " automatically indent new line
 
 set ts=4                " number of spaces in a tab
 set sw=4                " number of spaces for indent
-set et                  " expand tabs into spaces
+set noet                " don't expand tabs into spaces
 
 " mouse settings
 set mousehide           " Hide mouse pointer on insert mode."
